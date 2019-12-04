@@ -1,0 +1,28 @@
+---
+title: "RMD Templates"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Content 
+This package provides a list of RMD Templates to use. The collection is opinionated.
+
+# Install instructions
+
+First run the following code:
+```{r eval=FALSE}
+if(!require(devtools)){
+  install.packages("devtools")
+}
+devtools::install_github("statisticsforsocialscience/rmd_templates")
+library(rmdtemplates)
+```
+
+Then restart R or better restart RStudio.
+
+Voilá, you should now have an addition option in your "New -> RMarkdown" dialoge
+
+![](img/click.png)

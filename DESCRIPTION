@@ -1,13 +1,13 @@
 Package: rmdtemplates
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: RMD Templates
+Version: 0.0.1.0
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "André",
+           family = "Calero Valdez",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: What license it uses
+           email = "andrecalerovaldez@gmail.com",
+           comment = c(ORCID = "0000-0002-6214-1461"))
+Description: This packages is an opinionated collection of useful R Markdown files to use.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
