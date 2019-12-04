@@ -1,2 +1,3 @@
 name: Open Data Website
+description: An open data website as a single html file to submit.
 create_dir: true
