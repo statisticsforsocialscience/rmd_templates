@@ -23,4 +23,4 @@ Then restart R or better restart RStudio.
 Voilá, you should now have an addition option in your “New -\>
 RMarkdown” dialoge
 
-![](img/click.png)
+![](README_files/click.png)
