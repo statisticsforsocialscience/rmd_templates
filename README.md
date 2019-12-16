@@ -6,6 +6,12 @@ RMD Templates
 This package provides a list of RMD Templates to use. The collection is
 opinionated.
 
+The templates contained are:
+
+  - Open Data Website based on rmdformats::material
+  - LNCS Springer template based on normal pdf output (comes with a list
+    of files ready for submission)
+
 # Install instructions
 
 First run the following code:
