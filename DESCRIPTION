@@ -1,6 +1,6 @@
 Package: rmdtemplates
 Title: RMD Templates
-Version: 0.0.1.0
+Version: 0.0.2.0
 Authors@R: 
     person(given = "André",
            family = "Calero Valdez",
@@ -11,3 +11,9 @@ Description: This packages is an opinionated collection of useful R Markdown fil
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Imports: 
+    cowplot,
+    rmdformats,
+    tidyverse,
+    knitr,
+    DT
