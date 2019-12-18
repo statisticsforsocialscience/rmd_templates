@@ -39,6 +39,10 @@ library(rmdformats)
 library(tidyverse)
 library(cowplot)
 # add libraries here
+
+# Add libraries to cite here:
+pkgs <- c("knitr", "tidyverse", "rmdformats", "kableExtra", "scales", "psych", "rmdtemplates")
+rmdtemplates::write_bib(pkgs)
 ```
 
 
@@ -65,12 +69,12 @@ Another nice feature are shortcuts for \eg and \ie
 You can cite any paper in parenthesis as following [@valdez2017priming] or inline saying that @valdez2017priming found something.
 Multiple citations are possible as well [@valdez2017priming;@valdez2019users].
 
-You can refer to other sections by kebab-casing to section \ref{a-subsection-sample}.
+You can refer to other sections by kebab-casing to section \ref{a-subsection-sample}. You can easily cite an r-package directly in the text by using the `cite_pkg` function from the package `r rmdtemplates::cite_pkg("rmdtemplates")`. 
 
 
 # Environments
 
-The environments 'definition', 'lemma', 'proposition', 'corollary', 'remark', and 'example' are defined in the LLNCS documentclass as well.
+The environments 'definition', 'lemma', 'proposition', 'corollary', 'remark', and 'example' are defined in the LLNCS document class as well.
 
 
 ## Theorems
@@ -129,12 +133,12 @@ iris %>% ggplot() + aes(x = Sepal.Length) + geom_histogram() + cowplot::theme_mi
 
 
 
-
-```{r eval=FALSE, include=FALSE, results="asis"}
-# This creates a "thightlist" of all packages added to the prepare_bibliography.R
-# set include and eval to TRUE to enable
-cat("\n\n# Used Packages\n\n")
-source("prepare_bibliography.R")
+# Acknowledgements {-}
+We would like to thank xyz.
+We would further like to thank the authors of the packages we have used.
+```{r r_citations, eval=TRUE, include=TRUE, results="asis"}
+rmdtemplates::line_cite(pkgs) # This creates a single line citing all packages
+#rmdtemplates::list_cite(pkgs) # This creates a "thightlist" of all packages 
 ```
 
 # References

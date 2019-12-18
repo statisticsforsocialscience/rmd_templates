@@ -1,6 +1,7 @@
 Package: rmdtemplates
 Title: RMD Templates
-Version: 0.0.2.0
+Version: 0.1.0.0
+Date: 2019-12-20
 Authors@R: 
     person(given = "André",
            family = "Calero Valdez",
@@ -17,3 +18,4 @@ Imports:
     tidyverse,
     knitr,
     DT
+RoxygenNote: 6.1.1
