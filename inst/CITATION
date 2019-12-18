@@ -1,0 +1,17 @@
+citHeader("To cite rmdtemplates in publications use:")
+
+citEntry(
+  entry    = "manual",
+  title    = "rmdtemplates - an opinionated collection of rmarkdown templates",
+  note     = sprintf("R package version %s", meta$Version),
+  author   = "André Calero Valdez",
+  journal  = "",
+  year     = sub("-.*", "", meta$Date),
+  volume   = "",
+  number   = "",
+  pages    = "",
+  url      = "https://github.com/statisticsforsocialscience/rmd_templates",
+  textVersion = paste(
+      "André Calero Valdez. rmdtemplates - an opinionated collection of rmarkdown templates. 2019"
+  )
+)
