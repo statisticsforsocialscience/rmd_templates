@@ -19,6 +19,7 @@ output:
     fig_width: 6
     fig_height: 3.5
     df_print: kable
+    use_bookdown: true
   pdf_document:
     fig_caption: true
     keep_tex: true
@@ -28,7 +29,7 @@ output:
 ---
 
 
-```{r knitr_init, echo=FALSE, message=FALSE, warning=FALSE, cache=FALSE, paged.print=TRUE}
+```{r setup, echo=FALSE, message=FALSE, warning=FALSE, cache=FALSE, paged.print=TRUE}
 ## Global options
 library(knitr)
 options(max.print="75")
@@ -47,13 +48,98 @@ opts_knit$set(width=100)
 
 # Load required libraries
 library(rmdformats)
+library(rmdtemplates)
 library(tidyverse)
 library(DT)
 # add libraries here
+pkgs <- c("knitr", "tidyverse", "rmdformats", "kableExtra", "scales", "psych", "rmdtemplates", "DT")
+rmdtemplates::write_bib(pkgs)
 ```
 
 
-# Abstract
+# Abstract {-}
+
+# First Section
+## A Subsection Sample
+Please note that the first paragraph of a section or subsection is
+not indented. The first paragraph that follows a table, figure,
+equation etc. does not need an indent, either.
+
+Subsequent paragraphs, however, are indented.
+
+### Sample Heading (Third Level) 
+Only two levels of
+headings should be numbered. Lower level headings remain unnumbered;
+they are formatted as run-in headings.
+
+#### Sample Heading (Fourth Level)
+The contribution should contain no more than four levels of
+headings. 
+
+
+# References
+You can cite any paper in parenthesis as following [@valdez2017priming] or inline saying that @valdez2017priming found something.
+Multiple citations are possible as well [@valdez2017priming;@valdez2019users].
+
+You can refer to other sections by kebab-casing to section`r ref("a-subsection-sample")`. You can easily cite an r-package directly in the text by using the `cite_pkg` function from the package `r rmdtemplates::cite_pkg("rmdtemplates")`. 
+
+
+# Environments
+
+The environments 'definition', 'lemma', 'proposition', 'corollary', 'remark', and 'example' are defined in the available as well.
+
+
+## Theorems
+```{r theorem, echo=FALSE, results='asis'}
+theorem <- generate_environment("Theorem")
+theorem("This is a sample theorem. The run-in heading is set in bold, 
+        while the following text appears in italics. Definitions, lemmas, propositions, 
+        and corollaries are styled the same way.")
+```
+
+
+```{r theorem2, echo=FALSE, results='asis'}
+# note that environments require echo=FALSE and results='asis'
+
+theorem("This is a second. Numbering works automatically.")
+```
+
+
+
+## Equations
+\begin{equation}
+x + y = z
+\end{equation}
+
+
+
+## Tables
+You can get the non breaking space in RStudio by pressing ALT+SPACE.
+You can refer to tables by using Table`r ref("tab:table1")`.
+
+```{r table1, echo=FALSE}
+# Note that the label has to be added manually in the caption here.
+iris %>% head() %>% knitr::kable(caption = "Test")
+```
+
+
+```{r table2}
+tribble(
+  ~`Column Head A`, ~`Column Head B`,
+  "a",  1:3,
+  "b",  4:6
+) %>% knitr::kable(caption = "A tribble example", booktabs=T, longtable=T)
+```
+
+## Figures
+
+You can refer to tables by using Figure`r ref("fig:fig1")`.
+
+```{r fig1, fig.cap="This is the text caption under the figure"}
+# Note that the label for a figure is always fig:chunkname
+iris %>% ggplot() + aes(x = Sepal.Length) + geom_histogram() + cowplot::theme_minimal_hgrid()
+
+```
 
 
 
@@ -77,9 +163,9 @@ datatable(data_df, filter = list(position = 'top', clear = TRUE, plain = FALSE),
 
 
 
-# Used Packages
-```{r results="asis"}
-source("prepare_bibliography.R")
+```{r r_citations, eval=TRUE, include=TRUE, results="asis"}
+#rmdtemplates::line_cite(pkgs) # This creates a single line citing all packages
+rmdtemplates::list_cite(pkgs) # This creates a "thightlist" of all packages 
 ```
 
 # References
