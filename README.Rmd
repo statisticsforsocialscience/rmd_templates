@@ -1,12 +1,19 @@
 ---
-title: "RMD Templates"
 output: github_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, out.width = "50%")
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "50%"
+)
 ```
 
+# rmdtemplates
 
 <!-- badges: start -->
 [![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
@@ -19,6 +26,27 @@ The templates contained are:
 
 * Open Data Website based on rmdformats::material
 * LNCS Springer template based on normal pdf output (comes with a list of files ready for submission)
+
+## Installation
+
+You can **not yet** install the released version of rmdtemplates from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("rmdtemplates")
+```
+
+And the development version from [GitHub](https://github.com/) with:
+
+``` r
+if(!require(devtools)){
+  install.packages("devtools")
+}
+devtools::install_github("statisticsforsocialscience/rmd_templates")
+library(rmdtemplates)
+```
+
+
+
 
 ## Install instructions
 
@@ -37,5 +65,6 @@ Voilá, you should now have an addition option in your "New -> RMarkdown" dialog
 ```{r echo=FALSE}
 knitr::include_graphics("README_files/click.png")
 ```
+
 
 
