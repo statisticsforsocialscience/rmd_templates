@@ -1,5 +1,5 @@
 Package: rmdtemplates
-Title: RMD Templates
+Title: rmdtemplates - an opinionated collection of rmarkdown templates
 Version: 0.3.0.0
 Date: 2019-12-28
 Authors@R: 
@@ -10,6 +10,7 @@ Authors@R:
            comment = c(ORCID = "0000-0002-6214-1461"))
 Description: This packages is an opinionated collection of useful R Markdown files to use.
 License: MIT + file LICENSE
+URL: https://github.com/statisticsforsocialscience/rmd_templates
 Encoding: UTF-8
 LazyData: true
 Imports: 
