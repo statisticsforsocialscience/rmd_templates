@@ -12,6 +12,6 @@ citEntry(
   pages    = "",
   url      = "https://github.com/statisticsforsocialscience/rmd_templates",
   textVersion = paste(
-      "André Calero Valdez. rmdtemplates - an opinionated collection of rmarkdown templates. 2019"
+      "André Calero Valdez (2019). https://github.com/statisticsforsocialscience/rmd_templates rmdtemplates - an opinionated collection of rmarkdown templates."
   )
 )
