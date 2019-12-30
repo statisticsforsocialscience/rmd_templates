@@ -1,6 +1,12 @@
 RMD Templates
 ================
 
+<!-- badges: start -->
+
+[![Lifecycle:
+maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+<!-- badges: end -->
+
 This package provides a list of RMD Templates to use. The collection is
 opinionated.
 
