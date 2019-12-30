@@ -28,7 +28,7 @@ output:
     dev: pdf
 ---
 
-
+ 
 ```{r setup, echo=FALSE, message=FALSE, warning=FALSE, cache=FALSE, paged.print=TRUE}
 ## Global options
 library(knitr)

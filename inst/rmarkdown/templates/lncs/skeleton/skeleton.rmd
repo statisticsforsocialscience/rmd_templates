@@ -71,7 +71,7 @@ Note: These don't work in HTML output.
 You can cite any paper in parenthesis as following [@valdez2017priming] or inline saying that @valdez2017priming found something.
 Multiple citations are possible as well [@valdez2017priming;@valdez2019users].
 
-You can refer to other sections by kebab-casing to section`r ref("a-subsection-sample")`. You can easily cite an r-package directly in the text by using the `cite_pkg` function from the package `r rmdtemplates::cite_pkg("rmdtemplates")`. 
+You can refer to other sections by kebab-casing to section`r ref("a-subsection-sample")`. You can easily cite an r-package directly in the text by using the `cite_pkg` function from the package `r rmdtemplates::cite_pkg("rmdtemplates")`.  
 
 
 # Environments
