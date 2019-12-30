@@ -10,6 +10,7 @@ knitr::opts_chunk$set(echo = TRUE, out.width = "50%")
 
 <!-- badges: start -->
 [![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+[![Build Status](https://travis-ci.org/statisticsforsocialscience/rmd_templates.svg?branch=master)](https://travis-ci.org/statisticsforsocialscience/rmd_templates)
 <!-- badges: end -->
 
 This package provides a list of RMD Templates to use. The collection is opinionated.
