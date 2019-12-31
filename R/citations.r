@@ -14,7 +14,7 @@
 #' @examples
 #' write_bib(c("rmdtemplates", "knitr"))
 write_bib <- function(pkgs) {
-  knitr::write_bib(pkgs, "rpackages.bib", width = 60)
+  knitr::write_bib(pkgs, "rpackages.bib", width = 120)
 }
 
 

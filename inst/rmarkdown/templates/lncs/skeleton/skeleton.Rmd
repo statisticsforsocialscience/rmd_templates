@@ -62,7 +62,7 @@ they are formatted as run-in headings.
 
 #### Sample Heading (Fourth Level)
 The contribution should contain no more than four levels of
-headings. Table`r ref("tab1")` gives a summary of all heading levels.
+headings. Table \@ref(tab1) gives a summary of all heading levels.
 
 Another nice feature are shortcuts for \eg and \ie 
 Note: These don't work in HTML output.
@@ -71,7 +71,7 @@ Note: These don't work in HTML output.
 You can cite any paper in parenthesis as following [@valdez2017priming] or inline saying that @valdez2017priming found something.
 Multiple citations are possible as well [@valdez2017priming;@valdez2019users].
 
-You can refer to other sections by kebab-casing to section`r ref("a-subsection-sample")`. You can easily cite an r-package directly in the text by using the `cite_pkg` function from the package `r rmdtemplates::cite_pkg("rmdtemplates")`.  
+You can refer to other sections by kebab-casing to section \@ref(a-subsection-sample). You can easily cite an r-package directly in the text by using the `cite_pkg` function from the package `r rmdtemplates::cite_pkg("rmdtemplates")`.  
 
 
 # Environments
@@ -105,7 +105,7 @@ x + y = z
 
 ## Tables
 You can get the non breaking space in RStudio by pressing ALT+SPACE.
-You can refer to tables by using Table`r ref("tab:table1")`.
+You can refer to tables by using Table \@ref(tab:table1).
 
 ```{r table1, echo=FALSE}
 # Note that the label has to be added manually in the caption here.
@@ -144,7 +144,7 @@ Title (centered) &  {\Large\bfseries Lecture Notes} & 14 point, bold\\
 
 ## Figures
 
-You can refer to tables by using Figure`r ref("fig:fig1")`.
+You can refer to tables by using Figure \@ref(fig:fig1).
 
 ```{r fig1, fig.cap="This is the text caption under the figure"}
 # Note that the label for a figure is always fig:chunkname
