@@ -19,6 +19,7 @@ The templates contained are:
   - Open Data Website based on rmdformats::material
   - LNCS Springer template based on normal pdf output (comes with a list
     of files ready for submission)
+  - PocketMod :)
 
 ## Installation
 
@@ -53,5 +54,5 @@ library(rmdtemplates)
 
 Then restart R or better restart RStudio.
 
-Voilá, you should now have an addition option in your “New -\>
-RMarkdown” dialoge <img src="README_files/click.png" width="50%" />
+Voilá, you should now have additional options in your “New -\>
+RMarkdown” dialog. <img src="README_files/click.png" width="50%" />

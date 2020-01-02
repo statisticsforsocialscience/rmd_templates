@@ -1,0 +1,122 @@
+---
+title: "Untitled"
+author: "My Name"
+email: "me@mail.com"
+nocover: false
+fontsize: 24pt
+paper: A4
+output:
+  bookdown::pdf_document2:
+    fig_caption: false
+    keep_tex: false
+    template: pockettemplate.tex
+    dev: pdf
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      fig.width = 5,
+                      fig.asp = 0.618, # better default for font sizes
+                      out.width = "90%")
+library(tidyverse)
+
+# nocover option lets you pick 8 instead of 7 pages
+
+
+```
+
+
+# What are Pocketmods?
+
+* Little books that can be printed
+* 8 Pages (minus the cover?)
+* They fold nicely
+* They only print on one side of the paper
+* Use them to reuse printed paper
+
+
+\clearpage
+# How to fold
+
+* http://www.pocketmod.com
+* http://www.youtube.com/watch?v=IAb31rIeGZo
+
+
+\clearpage
+# Things that work in RMarkdown
+
+You can use figures. But avoid using captions as they create a floating environment.
+
+```{r}
+hist(iris$Sepal.Length)
+```
+
+
+\clearpage
+# Tables
+
+Tables work as well. 
+
+```{r echo=FALSE}
+iris %>% 
+  group_by(Species) %>% 
+  summarise(SL = mean(Sepal.Length), 
+            SW = mean(Sepal.Width)) %>% 
+  pander::pander()
+```
+
+Also regular markdown tables.
+
+
+English German
+-----   -------
+one     ein
+two     zwei
+
+
+\clearpage
+# Some ideas
+
+* Cheat Sheets
+* Daily planners
+* Note pads, doodle sketchpads
+* Conference/event itinerary handouts
+* Personal book of inspirational quotes
+* Little books for little hands
+
+
+\clearpage
+# Example cheat sheet
+
+Sample mean $\Sigma \frac{x_i}{n}$.
+Sample variance $\Sigma \frac{(x_i - \bar{x})^2}{n-1}$.
+
+One Sample t-Test. Tests sample mean deviation from a number.
+
+```r
+res <- t.test(iris$Sepal.Length)
+apastats::describe.ttest(res)
+```
+
+```{r include=FALSE}
+res <- t.test(iris$Sepal.Length)
+```
+
+Reports: `r apastats::describe.ttest(res)`.
+
+
+\clearpage
+# Room for notes
+
+
+
+
+
+```{r endofdocument, eval=FALSE, include=FALSE}
+
+#
+# Pocketmods only have 8 pages. You can use all 8, if you set the "nocover" option to true in the yaml.
+#
+
+```
+

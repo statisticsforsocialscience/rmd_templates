@@ -1,0 +1,57 @@
+%% Quick hack by LianTze Lim (liantze@gmail.com)
+\ProvidesPackage{pocketmod}[2017/05/07 package pocketmod.sty by LianTze Lim (liantze@gmail.com)]
+
+\newif\if@showmarks\@showmarksfalse
+\DeclareOption{showmarks}{
+  \@showmarkstrue
+}
+\ProcessOptions
+
+\RequirePackage{pgfpages}
+\pgfpagesuselayout{8 on 1}
+\newlength{\@adjlength}
+\pgfmathsetmacro{\@myratio}{0.25*\paperheight/\paperwidth}
+\pgfmathsetlength{\@adjlength}{(\@myratio * \paperheight)/2}
+
+\pgfpageslogicalpageoptions{1}{
+  center=\pgfpoint{.125\pgfphysicalwidth}{.5\pgfphysicalheight - \@adjlength},%
+	rotation=180%
+}
+\pgfpageslogicalpageoptions{2}{
+  center=\pgfpoint{.125\pgfphysicalwidth}{.5\pgfphysicalheight + \@adjlength}%
+}
+\pgfpageslogicalpageoptions{3}{
+  center=\pgfpoint{.375\pgfphysicalwidth}{.5\pgfphysicalheight + \@adjlength}%
+}
+\pgfpageslogicalpageoptions{4}{
+  center=\pgfpoint{.625\pgfphysicalwidth}{.5\pgfphysicalheight + \@adjlength}%
+}
+\pgfpageslogicalpageoptions{5}{
+  center=\pgfpoint{.875\pgfphysicalwidth}{.5\pgfphysicalheight + \@adjlength}%
+}
+\pgfpageslogicalpageoptions{6}{
+  center=\pgfpoint{.875\pgfphysicalwidth}{.5\pgfphysicalheight - \@adjlength},%
+  rotation=180
+}
+\pgfpageslogicalpageoptions{7}{
+  center=\pgfpoint{.625\pgfphysicalwidth}{.5\pgfphysicalheight - \@adjlength},
+  rotation=180
+}
+\pgfpageslogicalpageoptions{8}{
+  center=\pgfpoint{.375\pgfphysicalwidth}{.5\pgfphysicalheight - \@adjlength},%
+  rotation=180
+}
+
+
+\if@showmarks
+  \RequirePackage{pgf}
+  \pgfpageslogicalpageoptions{1}{border code=\pgfsetlinewidth{0.4pt}\pgfsetstrokecolor{gray!40}\pgfsetdash{{0.2in}{0.2in}}{0pt}\pgfusepath{stroke}\pgfsetdash{}{0pt}}
+  \pgfpageslogicalpageoptions{2}{border code=\pgfsetlinewidth{0.4pt}\pgfsetstrokecolor{gray!40}\pgfsetdash{{0.2in}{0.2in}}{0pt}\pgfusepath{stroke}\pgfsetdash{}{0pt}}
+  \pgfpageslogicalpageoptions{3}{border code=\pgfsetlinewidth{0.4pt}\pgfsetstrokecolor{gray!40}\pgfsetdash{{0.2in}{0.2in}}{0pt}\pgfusepath{stroke}\pgfsetdash{}{0pt}}
+  \pgfpageslogicalpageoptions{4}{border code=\pgfsetlinewidth{0.4pt}\pgfsetstrokecolor{gray!40}\pgfsetdash{{0.2in}{0.2in}}{0pt}\pgfusepath{stroke}\pgfsetdash{}{0pt}}
+  \pgfpageslogicalpageoptions{5}{border code=\pgfsetlinewidth{0.4pt}\pgfsetstrokecolor{gray!40}\pgfsetdash{{0.2in}{0.2in}}{0pt}\pgfusepath{stroke}\pgfsetdash{}{0pt}}
+  \pgfpageslogicalpageoptions{6}{border code=\pgfsetlinewidth{0.4pt}\pgfsetstrokecolor{gray!40}\pgfsetdash{{0.2in}{0.2in}}{0pt}\pgfusepath{stroke}\pgfsetdash{}{0pt}}
+  \pgfpageslogicalpageoptions{7}{border code=\pgfsetlinewidth{0.4pt}\pgfsetstrokecolor{gray!40}\pgfsetdash{{0.2in}{0.2in}}{0pt}\pgfusepath{stroke}\pgfsetdash{}{0pt}}
+  \pgfpageslogicalpageoptions{8}{border code=\pgfsetlinewidth{0.4pt}\pgfsetstrokecolor{gray!40}\pgfsetdash{{0.2in}{0.2in}}{0pt}\pgfusepath{stroke}\pgfsetdash{}{0pt}}
+
+\fi

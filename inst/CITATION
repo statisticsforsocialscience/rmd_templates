@@ -4,7 +4,7 @@ citEntry(
   entry    = "manual",
   title    = "rmdtemplates - an opinionated collection of rmarkdown templates",
   note     = sprintf("R package version %s", meta$Version),
-  author   = "Andr\'{e} Calero Valdez",
+  author   = "Andr\\'{e} Calero Valdez",
   journal  = "",
   year     = sub("-.*", "", meta$Date),
   volume   = "",
