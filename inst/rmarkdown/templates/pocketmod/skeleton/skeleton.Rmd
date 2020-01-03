@@ -102,7 +102,7 @@ apastats::describe.ttest(res)
 res <- t.test(iris$Sepal.Length)
 ```
 
-Reports: `r apastats::describe.ttest(res)`.
+Reports: _t_(149.0) = 86.43, _p_ < .001
 
 
 \clearpage
