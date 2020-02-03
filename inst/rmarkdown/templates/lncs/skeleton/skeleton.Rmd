@@ -5,12 +5,12 @@ abstract: |
   The abstract should briefly summarize the contents of the paper in 150--250 words.
 keywords: "First keyword \\and Second keyword \\and Another keyword."
 bibliography: ["rpackages.bib", "bibliography.bib"]
-biblio-style: "apalike"
+#biblio-style: "apalike"
 link-citations: true
 output:
   bookdown::pdf_document2:
     fig_caption: true
-    keep_tex: true
+    keep_tex: false
     template: lncs-template.tex
     md_extensions: +footnotes
     citation_package: biblatex
@@ -47,11 +47,16 @@ rmdtemplates::write_bib(pkgs)
 ```
 
 
+
 # First Section
 ## A Subsection Sample
 Please note that the first paragraph of a section or subsection is
 not indented. The first paragraph that follows a table, figure,
-equation etc. does not need an indent, either.
+equation etc. does not need an indent, either. [^1]
+
+[^1]: Footnote
+
+<!-- Comment --> 
 
 Subsequent paragraphs, however, are indented.
 
@@ -153,6 +158,14 @@ iris %>% ggplot() + aes(x = Sepal.Length) + geom_histogram() + cowplot::theme_mi
 ```
 
 
+```{r stimulus, eval=FALSE, fig.align='center', fig.cap="This is a small figuter (deactivated)", fig.show='hold', include=FALSE, out.width="50%"}
+
+knitr::include_graphics("../images/stimulus1.png")
+```
+
+<!-- You may include external Rmd-Files. Turn on off by switching Eval-->
+```{r introduction, eval=TRUE, child='10_introduction.Rmd'}
+```
 
 # Acknowledgements {-}
 We would like to thank xyz.

@@ -1,6 +1,6 @@
 Package: rmdtemplates
 Title: rmdtemplates - an opinionated collection of rmarkdown templates
-Version: 0.3.3.0000
+Version: 0.4.0.0000
 Date: 2019-12-28
 Authors@R: 
     person(given = "André",
@@ -21,7 +21,8 @@ Imports:
     knitr,
     DT,
     pkgdown,
-    pander
+    pander,
+    tinytex
 Remotes:
     achetverikov/apastats/apastats
 RoxygenNote: 7.0.2

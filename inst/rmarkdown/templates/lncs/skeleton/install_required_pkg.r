@@ -1,7 +1,5 @@
-# This script will install the required packages
+# This script will install the required Tinytex
 
-install.packages("knitr")
-install.packages("tidyverse")
-install.packages("DT")
-install.packages("rmdformats")
-install.packages("prettydoc")
+install.packages("tinytex")
+
+tinytex::install_tinytex()
