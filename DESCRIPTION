@@ -1,7 +1,7 @@
 Package: rmdtemplates
 Title: rmdtemplates - an opinionated collection of rmarkdown templates
 Version: 0.4.0.0000
-Date: 2019-12-28
+Date: 2020-02-02
 Authors@R: 
     person(given = "André",
            family = "Calero Valdez",
